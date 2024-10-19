@@ -13,13 +13,10 @@ const Home = () => {
     if (storedTasks) {
       try {
         setTaskList(JSON.parse(storedTasks));
-        console.log('Loaded tasks from local storage:', storedTasks);
       } catch (error) {
-        console.error('Failed to parse tasks from local storage', error);
         setTaskList(defaultTasks);
       }
     } else {
-      console.log('No tasks in local storage, using default tasks');
       setTaskList(defaultTasks);
     }
   }, []);
@@ -27,7 +24,6 @@ const Home = () => {
   useEffect(() => {
     if (taskList.length > 0) {
       localStorage.setItem('tasks', JSON.stringify(taskList));
-      console.log('Saved tasks to local storage:', taskList);
     }
   }, [taskList]);
 

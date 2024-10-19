@@ -16,9 +16,9 @@ const TaskList = ({ taskList = [], setTaskList, onEdit }) => {
             {taskList
                 .sort((a, b) => {
                     if (a.completed !== b.completed) {
-                        return a.completed ? 1 : -1; 
+                        return a.completed ? 1 : -1;
                     }
-                    
+
                     const priorityOrder = { high: 1, medium: 2, low: 3 };
                     return priorityOrder[a.priority] - priorityOrder[b.priority];
                 })
