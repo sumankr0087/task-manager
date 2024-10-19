@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { tasks as defaultTasks } from '../data/tasks';
 import TaskList from '../components/TaskList';
 import TaskForm from '../components/TaskForm';
 
